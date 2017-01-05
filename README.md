@@ -1,2 +1,6 @@
 # os-redesign
-Online Sense Redesign for Jan 2017
+To do list:
+[ ] style.css
+[ ] Header
+[ ] Choose articles for the homepage
+[ ] ...
