@@ -1,6 +1,6 @@
 # os-redesign
-To do list:
-[ ] style.css
-[ ] Header
-[ ] Choose articles for the homepage
-[ ] ...
+<p>To do list:</p>
+[ ] style.css<br />
+[ ] Header<br />
+[ ] Choose articles for the homepage<br />
+[ ] ...<br />
