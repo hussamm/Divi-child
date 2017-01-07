@@ -9,6 +9,10 @@
  Text Domain:  divi-child
 */
 
+
+
+/* Top Header */
+
 #top-header, #et-secondary-nav li ul { background-color: transparent; }
 #top-header a, #top-header a { color: #484848; }
 #et-info, #et-secondary-menu > ul > li a { padding-bottom: 0; }
