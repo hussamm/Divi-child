@@ -1,7 +1,13 @@
 # os-redesign
+
+<style>
+  pre { margin: 0; padding: 6px; width: auto; display: initial; }
+  .done { color: green; }
+  .active { font-weight: bold; color: #963; }
+</style>
 <p>To do list:</p>
-[ ] style.css<br />
-[ ] Header<br />
+<span class="done">[√] style.css</span><br />
+<span class="active">[-] Top Header <i>(Secondary Menu)</i></span><br />
 [ ] Choose articles for the homepage<br />
 [ ] ...<br />
 
