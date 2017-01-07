@@ -3,8 +3,8 @@
 <h2>To do list:</h2>
 [√] style.css<br />
 [ -] Top Header <i>(Secondary Menu)</i><br />
-[ &nbsp;] Choose articles for the homepage<br />
-[ &nbsp;] ...<br />
+[ &nbsp; ] Choose articles for the homepage<br />
+[ &nbsp; ] ...<br />
 
 <h2>After Implementation:</h2>
 <ul>
