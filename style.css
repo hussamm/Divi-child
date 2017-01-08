@@ -13,7 +13,7 @@
 
 /* Top Header */
 
-#top-header, #et-secondary-nav li ul { background-color: transparent; }
+#top-header, #et-secondary-nav li ul { background-color: #FFFFFF; }
 #top-header a, #top-header a { color: #484848; }
 #et-info, #et-secondary-menu > ul > li a { padding-bottom: 0; }
 #et-secondary-menu .lang-item a { color: #a8cc0d; font-weight: bold; font-size: 150%; border-left: 1px solid #484848; padding-left: 20px; }
