@@ -8,6 +8,9 @@
 
 <h2>After Implementation:</h2>
 <ul>
+  <li>Activate <code>OnlineSense 2017</code> theme, and click <code>Customize</code>, go to <code>Menus</code>, <code>Main Menu (English)</code>, uncheck <code>PRIMARY MENU ENGLISH</code> location and check it again. Finally save chnages.</li>
+  <li>Do the same with <code>Main Menu (Arabic)</code></li>
+  <li>If the footer menu did appear; then do the same with it (Arabic & English)</li>
   <li>Create new menu <code>Secondary English</code> in Location "Secondary Menu - English"</li>
   <li>Create new menu <code>Secondary Arabic</code> in Location "Secondary Menu - Arabic"</li>
 </ul>
