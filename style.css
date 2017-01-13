@@ -142,4 +142,13 @@
   float: left;
   padding: 10px 50px;
   color: white;
+  z-index: 1;
+}
+#top-menu-nav:hover ul li {
+  opacity: 0.1;
+  z-index: 0;
+}
+#top-menu-nav .menu-item:hover {
+  opacity: 1;
+  z-index: 2;
 }
