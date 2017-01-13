@@ -13,4 +13,5 @@
   <li>If the footer menu did appear; then do the same with it (Arabic & English)</li>
   <li>Create new menu <code>Secondary English</code> in Location "Secondary Menu - English"</li>
   <li>Create new menu <code>Secondary Arabic</code> in Location "Secondary Menu - Arabic"</li>
+  <li>Customizing ▸ Header & Navigation ▸ Header Format ▸ Header Style = <code>Centered</code></li>
 </ul>
