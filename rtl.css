@@ -1,0 +1,12 @@
+/*
+Theme Name:   OnlineSense 2017
+Template:     Divi
+*/
+
+/* Top Header */
+#et-secondary-menu .lang-item a { border-left: 0; border-right: 1px solid #484848; padding-left: 0; padding-right: 20px; }
+
+#et-top-navigation { margin-top: -60px; }
+#top-menu-nav { float: right !important; }
+
+.et-search-form-onlinesense { text-align: left; }

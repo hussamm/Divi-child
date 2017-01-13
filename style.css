@@ -13,7 +13,133 @@
 
 /* Top Header */
 
-#top-header, #et-secondary-nav li ul { background-color: transparent; }
-#top-header a, #top-header a { color: #484848; }
-#et-info, #et-secondary-menu > ul > li a { padding-bottom: 0; }
-#et-secondary-menu .lang-item a { color: #a8cc0d; font-weight: bold; font-size: 150%; border-left: 1px solid #484848; padding-left: 20px; }
+#top-header {
+  z-index: 99999;
+}
+#top-header, #et-secondary-nav li ul {
+  background-color: #FFFFFF;
+}
+
+#top-header a, #top-header a {
+  color: #484848;
+}
+
+#et-info,
+#et-secondary-menu > ul > li a {
+  margin-top: -1px;
+}
+#et-secondary-menu .lang-item a {
+  color: #a8cc0d;
+  font-weight: bold;
+  font-size: 150%;
+  border-left: 1px solid #484848;
+  padding-left: 20px;
+}
+
+
+#et-top-navigation {
+  margin-top: -40px;
+}
+@media (min-width: 981px) {
+  #main-header.et-fixed-header {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+/*
+.et_header_style_centered #main-header .container.et_menu_container {
+  height: 0;
+}/*/
+.logo_container {
+  width: 300px;
+  margin: -20px auto 0;
+}
+
+.logo_container a {
+  z-index: 100000;
+}
+
+#top-menu-nav {
+  float: left !important;
+}
+
+.et-search-form-onlinesense {
+  text-align: right;
+}
+.et-search-field {
+  background: #eee;
+  border: 0;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 17px;
+  margin: -10px 0 10px;
+  width: 30%
+}
+#top-menu-nav .menu-item {
+  float: left;
+  position: relative;
+  z-index: 10;
+  -webkit-perspective: 1500px;
+  -moz-perspective: 1500px;
+  perspective: 1500px;
+  margin-right: -1.2em;
+  min-width: 8em;
+}
+#top-menu-nav .menu-item label {
+    -webkit-border-top-right-radius: 27px;
+    -moz-border-radius-topright: 27px;
+    border-top-right-radius: 27px;
+    -webkit-border-top-left-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    border-top-left-radius: 15px;
+    position: relative;
+    padding: 0.8em 1.7em;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: .8em;
+    background: #44a4d0;
+    color: #fff;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 0;
+    display: block;
+}
+#top-menu-nav .menu-item label a {
+    display: inherit;
+    color: white;
+}
+#top-menu-nav .menu-item svg{
+  position: absolute;
+  bottom: 0;
+  right: -32px;
+  height: 36px;
+  fill: #469cc3;
+  z-index: -15;
+}
+#top-menu-nav .menu-item:nth-child(2) label {
+  background: #b3549d
+}
+#top-menu-nav .menu-item:nth-child(2) svg {
+  fill: #a74d92;
+}
+#top-menu-nav .menu-item:nth-child(3) label {
+  background: #dab939;
+}
+#top-menu-nav .menu-item:nth-child(3) svg {
+  fill: #d4b12a;
+}
+
+#navbar {
+  background: #30bcee;
+  border-top: 4px solid #30bcee;
+  border-bottom: 1px solid #FFF;
+  box-shadow: 10 0 4px solid #000;
+}
+#navbar ul {
+  margin: 0;
+}
+#navbar ul li {
+  float: left;
+  padding: 10px 50px;
+  color: white;
+}
