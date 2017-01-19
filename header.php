@@ -222,7 +222,7 @@
 							if ( 'on' == et_get_option( 'divi_disable_toptier' ) ) $menuClass .= ' et_disable_top_tier';
 							$primaryNav = '';
 
-							$primaryNav = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'menu_id' => 'top-menu', 'echo' => false ) );
+							$primaryNav = wp_nav_menu( array( 'theme_location' => 'tabs-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'menu_id' => 'top-menu', 'echo' => false ) );
 							$primaryNav = str_replace('<a ', '<label><a ', $primaryNav);
 							$primaryNav = str_replace('</li>', '<svg viewBox="0 0 73 68" preserveAspectRatio="xMinYMin meet"><path d="M0 0v68.1h72.67c0 0-13.75-4.75-26.25-14.25S24.37 30.85 17.92 21C13.04 14.21 4.08 2 0 0z"></path></svg></label></li>', $primaryNav);
 							if ( '' == $primaryNav ) :
@@ -275,11 +275,12 @@
 			</div> <!-- .container -->
 
 			<?php
+
 				// Define the current section
 				$current_page_template = get_page_template_slug( get_the_ID() );
 
-				if ($current_page_template == 'views/onlinesense-youngteens-page.php'   || is_root([53, 55]) ||
-						$current_page_template == 'views/onlinesense-teenagers-page.php'		|| is_root([1,7]))      $current_section_name = 'teenagers';
+				if ($current_page_template == 'views/onlinesense-youngteens-page.php' 	|| 
+						$current_page_template == 'views/onlinesense-teenagers-page.php'		|| is_root([1,7, 53, 55]))      $current_section_name = 'students';
 				elseif ($current_page_template == 'views/onlinesense-parents-page.php'  || is_root([30, 32]))   $current_section_name = 'parents';
 				elseif ($current_page_template == 'views/onlinesense-teachers-page.php' || is_root([34,36]))    $current_section_name = 'teachers';
 				else $current_section_name = 'primary';
@@ -306,16 +307,16 @@
 				</div>
 			</div> <!-- .parents-navbar -->
 
-			<div class="navbar teenagers-navbar <?php echo $current_section_name == 'teenagers' ? $current_section_class : ''; ?>">
+			<div class="navbar students-navbar <?php echo $current_section_name == 'students' ? $current_section_class : ''; ?>">
 				<div class="container clearfix">
-					<?php echo wp_nav_menu( array( 'theme_location' => 'teenagers-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => '', 'menu_id' => 'teenagers-menu', 'echo' => true ) ); ?>
+					<?php echo wp_nav_menu( array( 'theme_location' => 'students-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => '', 'menu_id' => 'students-menu', 'echo' => true ) ); ?>
 				</div>
-			</div> <!-- .teenagers-navbar -->
+			</div> <!-- .students-navbar -->
 
 			<script>
 					jQuery('#top-menu-nav ul li:nth-child(1)').hover(function() { jQuery('.hover-navbar').removeClass('hover-navbar'); jQuery('.teachers-navbar' ).addClass('hover-navbar'); })
 					jQuery('#top-menu-nav ul li:nth-child(2)').hover(function() { jQuery('.hover-navbar').removeClass('hover-navbar'); jQuery('.parents-navbar'  ).addClass('hover-navbar'); })
-					jQuery('#top-menu-nav ul li:nth-child(3)').hover(function() { jQuery('.hover-navbar').removeClass('hover-navbar'); jQuery('.teenagers-navbar').addClass('hover-navbar'); })
+					jQuery('#top-menu-nav ul li:nth-child(3)').hover(function() { jQuery('.hover-navbar').removeClass('hover-navbar'); jQuery('.students-navbar').addClass('hover-navbar'); })
 					jQuery('header').mouseleave(function() { jQuery('.hover-navbar').removeClass('hover-navbar'); jQuery('.current-navbar').addClass('hover-navbar'); })
 			</script>
 
