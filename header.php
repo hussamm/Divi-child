@@ -256,43 +256,52 @@
 					<?php endif; ?>
 
 					<?php if ( ( false !== et_get_option( 'show_search_icon', true ) && ! $et_slide_header ) || is_customize_preview() ) : ?>
-
-						<form role="search" method="get" class="et-search-form-onlinesense" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<?php
-							printf( '<input type="search" class="et-search-field" placeholder="%1$s" value="%2$s" name="s" title="%3$s" />',
-								esc_attr__( 'Search &hellip;', 'Divi' ),
-								get_search_query(),
-								esc_attr__( 'Search for:', 'Divi' )
-							);
-						?>
-						</form>
-
-
+					<div id="et_top_search">
+						<div id="et_search_label"><?php echo esc_attr__('Search') ?>...</div>
+						<div id="et_search_icon"></div>
+					</div>
 					<?php endif; // true === et_get_option( 'show_search_icon', false ) ?>
 
 					<?php do_action( 'et_header_top' ); ?>
 				</div> <!-- #et-top-navigation -->
 			</div> <!-- .container -->
 
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<?php
+						printf( '<input type="search" class="et-search-field" placeholder="%1$s" value="%2$s" name="s" title="%3$s" />',
+							esc_attr__( 'Search' ),
+							get_search_query(),
+							esc_attr__( 'Search for:', 'Divi' )
+						);
+					?>
+					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+
 			<?php
 
 				// Define the current section
 				$current_page_template = get_page_template_slug( get_the_ID() );
+				$default_section = get_post_meta(get_the_ID(), 'default_section', true);
 
-				if ($current_page_template == 'views/onlinesense-youngteens-page.php' 	|| 
+				if ($default_section == 'students' || $current_page_template == 'views/onlinesense-youngteens-page.php' 	||
 						$current_page_template == 'views/onlinesense-teenagers-page.php'		|| is_root([1,7, 53, 55]))      $current_section_name = 'students';
-				elseif ($current_page_template == 'views/onlinesense-parents-page.php'  || is_root([30, 32]))   $current_section_name = 'parents';
-				elseif ($current_page_template == 'views/onlinesense-teachers-page.php' || is_root([34,36]))    $current_section_name = 'teachers';
+				elseif ($default_section == 'parents' || $current_page_template == 'views/onlinesense-parents-page.php'  || is_root([30, 32]))   $current_section_name = 'parents';
+				elseif ($default_section == 'teachers' || $current_page_template == 'views/onlinesense-teachers-page.php' || is_root([34,36]))    $current_section_name = 'teachers';
 				else $current_section_name = 'primary';
 
 				$current_section_class = "current-navbar hover-navbar";
 			?>
 
 
-			<div class="navbar primary-navbar <?php echo $current_section_name == 'primary' ? $current_section_class : ''; ?>">
+			<div class="navbar primary-navbar <?php echo $current_section_name == 'primary' ? $current_section_class : ''; ?>" style="height: 10px;">
+				<!--
 				<div class="container clearfix">
-					<?php echo wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => '', 'menu_id' => 'main-menu', 'echo' => true ) ); ?>
-				</div>
+					<?php //echo wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => '', 'menu_id' => 'main-menu', 'echo' => true ) ); ?>
+				</div>-->
 			</div> <!-- .primary-navbar -->
 
 			<div class="navbar teachers-navbar <?php echo $current_section_name == 'teachers' ? $current_section_class : ''; ?>">
@@ -314,10 +323,12 @@
 			</div> <!-- .students-navbar -->
 
 			<script>
+			/*
 					jQuery('#top-menu-nav ul li:nth-child(1)').hover(function() { jQuery('.hover-navbar').removeClass('hover-navbar'); jQuery('.teachers-navbar' ).addClass('hover-navbar'); })
 					jQuery('#top-menu-nav ul li:nth-child(2)').hover(function() { jQuery('.hover-navbar').removeClass('hover-navbar'); jQuery('.parents-navbar'  ).addClass('hover-navbar'); })
 					jQuery('#top-menu-nav ul li:nth-child(3)').hover(function() { jQuery('.hover-navbar').removeClass('hover-navbar'); jQuery('.students-navbar').addClass('hover-navbar'); })
 					jQuery('header').mouseleave(function() { jQuery('.hover-navbar').removeClass('hover-navbar'); jQuery('.current-navbar').addClass('hover-navbar'); })
+			*/
 			</script>
 
 			<div class="et_search_outer">
